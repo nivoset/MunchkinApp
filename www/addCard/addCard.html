@@ -1,0 +1,15 @@
+<div id="addCard" ng-show="info.showOptionsMenu">
+   <div ng-repeat="counter in [1,2,3,4,5]"
+      class=" cardstock" 
+      ng-click="info.AddCard(counter)">+{{counter}}</div> 
+      
+      <div class ="selectCardDiv">
+         <div class="arrow-left" 
+              ng-click="info.customCardChange(-1)"></div>
+         <div class=" cardstock" 
+              ng-click="info.AddCard(info.customCardValue)">
+            <span ng-show="info.customCardValue > 0">+</span>{{info.customCardValue}}</div> 
+         <div class="arrow-right" 
+              ng-click="info.customCardChange(1)"></div>
+      </div>
+</div>

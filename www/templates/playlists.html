@@ -1,0 +1,43 @@
+<ion-view view-title="Game" hide-nav-bar="true">
+  	<div class="bar bar-header bar-{{players[0].labelType}}">
+  		<button class="button icon button-clear ion-navicon" 
+  			menu-toggle="left"></button>
+	  	<h1 class="title txtUpsideDown">
+	  		<div class="" style="float:left;"> Level: {{ players[0].level}}</div>
+	  	 	<div class="" style="padding-left:50px;float:left;">Power: {{ players[0].killPower}}</div>
+  	 	</h1>
+	</div>
+	<div style="height:50px;"></div>
+
+ 	<div ng-repeat="player in players">
+		<div 
+	     	class="cardstock"
+	     	ng-repeat="card in player.items" 
+	     	ng-if="!card.deleteCard"
+	     	ng-click="card.removeCard()">{{card.value}}
+	 	</div>
+  		<add-card info="player"></add-card>
+  	</div>
+
+
+	<div class="bar bar-footer bar-{{players[0].labelType}}">
+		<div style="width=33%; float:left;">
+	    	<button 
+	    		class="button icon ion-grid" 
+	    		ng-click="players[0].toggleCardWindow();">
+    		</button>
+	    	<button 
+	    		class="button icon ion-ios-loop-strong" 
+	    		ng-click="resetPlayer();">
+    		</button>
+    	</div>
+    	<div style="float:left;">
+    		<h1 class="title "
+    			>{{players[0].killPower}}</h1>
+    	</div>
+    	<div style="position:absolute; right:5px;">
+	    	<button ng-click="players[0].levelUp(-1);" class="button icon button-clear ion-minus-circled"></button>
+	    	<button ng-click="players[0].levelUp(1);" class="button icon button-clear ion-plus-circled"></button>
+    	</div>
+	</div>
+</ion-view>

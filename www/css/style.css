@@ -1,0 +1,102 @@
+/* Empty. Add your own CSS if you like */
+
+.color-background { background-color: #AA6C39 }	/* Main Primary color */
+.color-primary-1 { color: #FFD1AA } //button?
+.color-primary-2 { color: #D49A6A }
+.color-primary-3 { color: #804515 }
+.color-primary-4 { color: #552700 }
+
+.txtUpsideDown {
+  filter:  progid:DXImageTransform.Microsoft.BasicImage(rotation=2);  /* IE6,IE7 */
+  ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)"; /* IE8 */
+  -moz-transform: rotate(-180deg);  /* FF3.5+ */
+  -o-transform: rotate(-180deg);  /* Opera 10.5 */
+  -webkit-transform: rotate(-180deg);  /* Safari 3.1+, Chrome */
+  position: absolute; 
+}
+
+.selectCardDiv {
+   float:left;
+}
+
+#addCard {
+  position: fixed;
+  z-index: 100; 
+  bottom: 44px; 
+  left: 0;
+  width: 100%;
+  background-color:#D49A6A;
+}
+
+.arrow-left {
+  float:left;
+  margin-top: 13px;
+  width: 0; 
+  height: 0; 
+  border-top: 35px solid transparent;
+  border-bottom: 35px solid transparent; 
+  
+  border-right:35px solid #FFD1AA; 
+}
+
+.arrow-right {
+  float:left;
+  margin-top: 13px;
+  width: 0; 
+  height: 0; 
+  border-top: 35px solid transparent;
+  border-bottom: 35px solid transparent;
+  
+  border-left: 35px solid #FFD1AA;
+}
+
+.cardstock {
+   float:left;
+   width: 60px;
+   height: 84px;
+
+   border: 1px rgb(0, 0, 0) solid;
+
+   margin: 5px;
+
+   background: #FFD1AA;
+
+   color: rgb(25,25,25);
+   font-size: 30px;
+   font-weight: 200;
+   font-family: inherit;
+   font-style: inherit;
+   text-decoration: inherit;
+   text-align: center;
+
+   line-height: 75px;
+   -webkit-border-radius: 10px;
+   -moz-border-radius: 10px;
+   border-radius: 10px;
+
+   -moz-box-shadow:  2px 5px 10px 1px rgb(0,0,0);
+   -webkit-box-shadow:  2px 5px 10px 1px rgb(0,0,0);
+   box-shadow:  2px 5px 10px 1px rgb(0,0,0);
+}
+
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+}
+
+.centered_h {
+  position: fixed;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, 0%);
+}
+
+.centered_v {
+  position: fixed;
+  top: 50%;
+  /* bring your own prefixes */
+  transform: translate(0%, -50%);
+}
